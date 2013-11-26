@@ -32,10 +32,7 @@ import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
-<<<<<<< HEAD
-=======
 import android.content.pm.ResolveInfo;
->>>>>>> Navigation Bar: Toggle last app on recents button long press
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.graphics.Bitmap;
