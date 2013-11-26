@@ -76,7 +76,9 @@
     <string name="safe_headset_volume">@*android:string/safe_headset_warning_title</string>
     <!-- Notifications: Allow hiding notification icons -->
     <string name="status_bar_notification_hide_icon_packages">Hide app\'s notification icon(s)</string>
-     <!-- HALO -->
+    <!-- Content description of the halo button in the notification panel for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_halo">Create notification halo.</string>
+    <!-- HALO -->
     <string name="halo_dismiss">Dismiss notification</string>
     <string name="halo_hide">Hide</string>
     <string name="halo_clear_all">Dismiss all notifications</string>
