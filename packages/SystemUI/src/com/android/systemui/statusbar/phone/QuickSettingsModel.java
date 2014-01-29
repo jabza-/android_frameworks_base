@@ -376,6 +376,24 @@ public class QuickSettingsModel implements BluetoothStateChangeCallback,
         }
     }
 
+    /** ContentObserver to determine the Ringer mode */
+    private class RingerObserver extends ContentObserver {
+        public RingerObserver(Handler handler) {
+            super(handler);
+        }
+
+        @Override
+        public void onChange(boolean selfChange) {
+            onRingerModeChanged();
+        }
+
+        public void startObserving() {
+            final ContentResolver cr = mContext.getContentResolver();
+            cr.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.VIBRATE_WHEN_RINGING), false, this);
+        }
+    }
+
     /** Callback for changes to remote display routes. */
     private class RemoteDisplayRouteCallback extends MediaRouter.SimpleCallback {
         @Override
@@ -1558,13 +1576,15 @@ public class QuickSettingsModel implements BluetoothStateChangeCallback,
         final int mode = getImmersiveMode();
         final boolean enabled = isPieEnabled();
         if (mode == IMMERSIVE_MODE_OFF) {
-            mImmersiveGlobalState.iconId = enabled ?
-                    R.drawable.ic_qs_pie_global_off : R.drawable.ic_qs_immersive_global_off;
-            mImmersiveGlobalState.label = r.getString(R.string.quick_settings_immersive_global_off_label);
+            mImmersiveGlobalState.iconId =
+                    R.drawable.ic_qs_immersive_global_off;
+            mImmersiveGlobalState.label =
+                    r.getString(R.string.quick_settings_immersive_global_off_label);
         } else {
-            mImmersiveGlobalState.iconId = enabled ?
-                    R.drawable.ic_qs_pie_global_on : R.drawable.ic_qs_immersive_global_on;
-            mImmersiveGlobalState.label = r.getString(R.string.quick_settings_immersive_global_on_label);
+            mImmersiveGlobalState.iconId =
+                    R.drawable.ic_qs_immersive_global_on;
+            mImmersiveGlobalState.label =
+                    r.getString(R.string.quick_settings_immersive_global_on_label);
         }
         mImmersiveGlobalCallback.refreshView(mImmersiveGlobalTile, mImmersiveGlobalState);
     }

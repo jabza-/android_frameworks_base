@@ -94,8 +94,13 @@
     <string name="halo_tutorial1">This is HALO</string>
     <string name="halo_tutorial2">Move me: double tap &amp; drag</string>
     <string name="halo_tutorial3">Browse tasks: Horizontal drag</string>
-
-    <!-- On-the-spot preferences -->
+    
+    <!-- QuickSettings: Sound Tile  -->
+    <string name="quick_settings_ringer_mode_silent_label">Silent</string>
+    <string name="quick_settings_ringer_mode_vibrate_label">Vibrate</string>
+    <string name="quick_settings_ringer_mode_normal_label">Sound</string>
+    <string name="quick_settings_ringer_mode_normal_vibrate_label">Sound &amp; Vibration</string>
+    <string name="quick_settings_volume_label">Volume</string>
 
     <!-- Quick pulldown confirmation dialog -->
     <string name="quick_settings_quick_pull_down_title">Quick pull down</string>
