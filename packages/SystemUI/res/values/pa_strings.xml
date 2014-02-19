@@ -85,5 +85,5 @@
     <string name="halo_tutorial3">Browse tasks: Horizontal drag</string>
     <!-- On-the-spot preferences -->
     <string name="quick_settings_quick_pull_down">@string/quick_settings_quick_pull_down_title</string>
-    <string name="safe_headset_volume">@*android:string/safe_headset_warning_title</string>
+    <string name="safe_headset_volume">Safe headset volume</string>
 </resources>
