@@ -36,9 +36,6 @@ public class QuickSettingsDualBasicTile extends QuickSettingsTileView {
     public static final int FRONT = 0;
     public static final int BACK = 1;
 
-    public static final int FRONT = 0;
-    public static final int BACK = 1;
-
     public QuickSettingsBasicTile mFront;
     public QuickSettingsBasicTile mBack;
 
