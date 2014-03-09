@@ -932,7 +932,6 @@ public class VolumePanel extends Handler implements OnSeekBarChangeListener, Vie
                                 SettingConfirmationHelper helper =
                                         new SettingConfirmationHelper(mContext);
                                 helper.showConfirmationDialogForSetting(
-                                    helper.showConfirmationDialogForSetting(
                                         mContext.getResources()
                                                 .getString(R.string.safe_headset_warning_title),
                                         mContext.getResources()
@@ -940,7 +939,6 @@ public class VolumePanel extends Handler implements OnSeekBarChangeListener, Vie
                                         mContext.getResources()
                                                 .getDrawable(
                                                         R.drawable.safe_headset_volume_warning),
-                                                .getDrawable(R.drawable.safe_headset_volume_warning),
                                         Settings.System.SAFE_HEADSET_VOLUME);
                             }
                         })
