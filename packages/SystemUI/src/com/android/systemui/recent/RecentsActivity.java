@@ -27,6 +27,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.Settings;
+import android.util.SettingConfirmationHelper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -146,6 +148,14 @@ public class RecentsActivity extends Activity {
         } else {
             updateWallpaperVisibility(true);
         }
+        
+        SettingConfirmationHelper helper = new SettingConfirmationHelper(this);
+        helper.showConfirmationDialogForSetting(
+            this.getString(R.string.quick_settings_clear_all_title),
+            this.getString(R.string.quick_settings_clear_all_message),
+            this.getResources().getDrawable(R.drawable.quick_pull_down),
+            Settings.System.QUICK_SETTINGS_CLEAR_ALL);
+        
         mShowing = true;
         if (mRecentsPanel != null) {
             // Call and refresh the recent tasks list in case we didn't preload tasks
@@ -265,7 +275,12 @@ public class RecentsActivity extends Activity {
         } else if (CLEAR_RECENTS_INTENT.equals(action)) {
             if (mRecentsPanel != null) {
                 if (mRecentsPanel.isShowing()) {
-                    mRecentsPanel.clearRecentViewList();
+                        if(Settings.System.getInt(this.getContentResolver(),
+                            Settings.System.QUICK_SETTINGS_CLEAR_ALL, 0) != 2) {
+                                mRecentsPanel.clearRecentViewList();
+                        } else {
+                            dismissAndGoBack();
+                        }                    
                 }
             }
         }

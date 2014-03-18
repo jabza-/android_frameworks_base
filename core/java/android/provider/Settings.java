@@ -2623,6 +2623,12 @@ public final class Settings {
          * @hide
          */
         public static final String QUICK_SETTINGS_QUICK_PULL_DOWN = "quick_settings_quick_pull_down";
+        
+         /**
+         * Quick settings clear all option
+         * @hide
+         */
+        public static final String QUICK_SETTINGS_CLEAR_ALL = "quick_settings_clear_all";
 
         /**
          * Safe headset volume warning option
@@ -2795,7 +2801,8 @@ public final class Settings {
         public static final String[] SETTINGS_TO_RESET = {
             QUICK_SETTINGS_QUICK_PULL_DOWN,
             SAFE_HEADSET_VOLUME,
-            PIE_STATE
+            PIE_STATE,
+            QUICK_SETTINGS_CLEAR_ALL
         };
 
         // Settings moved to Settings.Secure
