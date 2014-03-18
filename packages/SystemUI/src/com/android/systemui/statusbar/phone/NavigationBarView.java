@@ -356,7 +356,7 @@ public class NavigationBarView extends LinearLayout implements NavigationCallbac
         } else if (button == NavigationCallback.NAVBAR_RECENTS_HINT) {
             ((ImageView)getRecentsButton()).setImageDrawable(
                 (0 != (hints & StatusBarManager.NAVIGATION_HINT_RECENT_ALT)) && Settings.System.getInt(
-                    mContext.getContentResolver(), Settings.System.QUICK_SETTINGS_CLEAR_ALL, 0) != 2
+                    mContext.getContentResolver(), Settings.System.NAVBAR_RECENTS_CLEAR_ALL, 0) != 2
                         ? (mVertical ? mRecentAltLandIcon : mRecentAltIcon)
                         : (mVertical ? mRecentLandIcon : mRecentIcon));
         }

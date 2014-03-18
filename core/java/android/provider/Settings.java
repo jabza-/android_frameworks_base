@@ -2630,6 +2630,12 @@ public final class Settings {
          */
         public static final String QUICK_SETTINGS_CLEAR_ALL = "quick_settings_clear_all";
 
+         /**
+         * Navbar recents clear all option
+         * @hide
+         */
+        public static final String NAVBAR_RECENTS_CLEAR_ALL = "navbar_recents_clear_all";
+
         /**
          * Safe headset volume warning option
          * @hide
@@ -2773,7 +2779,7 @@ public final class Settings {
         public static final String[] SETTINGS_TO_RESET = {
             QUICK_SETTINGS_QUICK_PULL_DOWN,
             SAFE_HEADSET_VOLUME,
-            QUICK_SETTINGS_CLEAR_ALL
+            NAVBAR_RECENTS_CLEAR_ALL
         };
 
         // Settings moved to Settings.Secure
