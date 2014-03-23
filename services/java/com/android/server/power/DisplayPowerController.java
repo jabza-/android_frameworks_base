@@ -568,6 +568,11 @@ final class DisplayPowerController {
                     } else mKeyguardService.setBackgroundBitmap(null);
                 }
 
+                        mKeyguardService.setBackgroundBitmap(tmpBmp);
+                        bmp.recycle();
+                        tmpBmp.recycle();
+                    }
+                }
                 mPendingRequestChangedLocked = true;
                 sendUpdatePowerStateLocked();
             }
