@@ -75,13 +75,7 @@
     <string name="quick_settings_ringer_mode_normal_vibrate_label">Sound &amp; Vibration</string>
     <string name="quick_settings_volume_label">Volume</string>
 
-    <!-- Quick pulldown confirmation dialog -->
-    <string name="quick_settings_quick_pull_down_title">Quick pull down</string>
-    <string name="quick_settings_quick_pull_down_message">Would you like the edge of the status bar to pull down quick settings?</string>
-
-    <!-- Names to be shown on settings, they must match with Settings.SETTINGS_TO_RESET array -->
-    <string name="quick_settings_quick_pull_down">@string/quick_settings_quick_pull_down_title</string>
-    <string name="safe_headset_volume">@*android:string/safe_headset_warning_title</string>
+    
     <!-- Notifications: Allow hiding notification icons -->
     <string name="status_bar_notification_hide_icon_packages">Hide app\'s notification icon(s)</string>
     <!-- Content description of the halo button in the notification panel for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
@@ -94,4 +88,23 @@
     <string name="halo_tutorial1">This is HALO</string>
     <string name="halo_tutorial2">Move me: double tap &amp; drag</string>
     <string name="halo_tutorial3">Browse tasks: Horizontal drag</string>
+
+    <!-- On-the-spot preferences -->
+
+    <!-- Quick pulldown confirmation dialog -->
+    <string name="quick_settings_quick_pull_down_title">Quick pull down</string>
+    <string name="quick_settings_quick_pull_down_message">Would you like the edge of the status bar to pull down quick settings?</string>
+
+    <!-- Pie controls -->
+    <string name="pie_date_format">ccc, dd MMM yyyy</string>
+    <string name="pie_hour_format_12">hh:mm</string>
+    <string name="pie_hour_format_24">HH:mm</string>
+    <string name="pie_am_pm">a</string>
+    <string name="enable_pie_control_title">Pie controls</string>
+    <string name="enable_pie_control_message">Would you like to use pie controls while in immersive mode?</string>
+
+    <!-- Names to be shown on settings, they must match with Settings.SETTINGS_TO_RESET array -->
+    <string name="quick_settings_quick_pull_down">@string/quick_settings_quick_pull_down_title</string>
+    <string name="safe_headset_volume">@*android:string/safe_headset_warning_title</string>
+    <string name="pie_state">@string/enable_pie_control_title</string>
 </resources>
