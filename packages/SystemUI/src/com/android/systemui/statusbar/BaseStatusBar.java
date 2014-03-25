@@ -206,6 +206,7 @@ public abstract class BaseStatusBar extends SystemUI implements
 
     public NotificationData getNotificationData() {
         return mNotificationData;
+    }
 
     public Handler getHandler() {
         return mHandler;
