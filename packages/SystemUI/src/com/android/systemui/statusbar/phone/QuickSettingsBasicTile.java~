@@ -30,8 +30,11 @@ import android.widget.TextView;
 import com.android.systemui.R;
 
 class QuickSettingsBasicTile extends QuickSettingsTileView {
+<<<<<<< HEAD
+=======
 
     public static final int FRONT = 0;
+>>>>>>> 1c00dbea82ba8283d98aded8ef34b2034b1ea56b
 
     public TextView mTextView;
     public ImageView mImageView;
@@ -96,6 +99,8 @@ class QuickSettingsBasicTile extends QuickSettingsTileView {
                 R.drawable.qs_tile_background);
         super.setEditMode(enabled);
     }
+<<<<<<< HEAD
+=======
 
     public void setupDualTile(final QuickSettingsDualBasicTile dualTile, int side) {
         if(dualTile != null) {
@@ -117,4 +122,6 @@ class QuickSettingsBasicTile extends QuickSettingsTileView {
     public void setSwitchViewVisibility(int vis) {
         mSwitchView.setVisibility(vis);
     }
+
+>>>>>>> 1c00dbea82ba8283d98aded8ef34b2034b1ea56b
 }
