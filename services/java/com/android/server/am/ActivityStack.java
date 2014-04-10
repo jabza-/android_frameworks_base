@@ -1390,6 +1390,7 @@ final class ActivityStack {
         // can be resumed...
         boolean pausing = mStackSupervisor.pauseBackStacks(userLeaving);
         if (mResumedActivity != null && (pauseActiveAppWhenUsingHalo() || !next.floatingWindow)) {
+
             pausing = true;
             startPausingLocked(userLeaving, false);
             if (DEBUG_STATES) Slog.d(TAG, "resumeTopActivityLocked: Pausing " + mResumedActivity);
