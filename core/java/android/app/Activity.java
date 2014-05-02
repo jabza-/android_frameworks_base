@@ -4237,14 +4237,6 @@ public class Activity extends ContextThemeWrapper
     }
 
     /**
-     * Hide from public api
-     * @hide
-     */
-    public void finishFloating() {
-        mMainThread.performFinishFloating();
-    }
-
-    /**
      * Finish this activity as well as all activities immediately below it
      * in the current task that have the same affinity.  This is typically
      * used when an application can be launched on to another task (such as
@@ -5268,12 +5260,14 @@ public class Activity extends ContextThemeWrapper
             mWindow.setCloseOnTouchOutsideIfNotSet(true);
             mWindow.setGravity(Gravity.CENTER);
 
-            mWindow.setFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND,
-                    WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-            WindowManager.LayoutParams params = mWindow.getAttributes();
-            params.alpha = 1f;
-            params.dimAmount = 0.5f;
-            mWindow.setAttributes((WindowManager.LayoutParams) params);
+            if (android.os.Process.myUid() == android.os.Process.SYSTEM_UID) {
+                mWindow.setFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND,
+                        WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+                WindowManager.LayoutParams params = mWindow.getAttributes();
+                params.alpha = 1f;
+                params.dimAmount = 0.25f;
+                mWindow.setAttributes((android.view.WindowManager.LayoutParams) params);
+            }
 
             // Scale it
             scaleFloatingWindow(context);
