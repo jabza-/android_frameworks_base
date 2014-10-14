@@ -80,10 +80,10 @@ public class VentureEasterActivity extends Activity {
         final TextView letter = new TextView(this);
 
         letter.setTypeface(bold);
-        letter.setTextSize(200);
+        letter.setTextSize(75);
         letter.setTextColor(TEXT_COLOR);
         letter.setGravity(Gravity.CENTER);
-        letter.setText("PA");
+        letter.setText("VENTURE");
 
         final int p = (int)(4 * metrics.density);
 
@@ -94,9 +94,9 @@ public class VentureEasterActivity extends Activity {
         tv.setTextColor(TEXT_COLOR);
         tv.setGravity(Gravity.CENTER);
         tv.setTransformationMethod(new AllCapsTransformationMethod(this));
-        String paVersion = SystemProperties.get("ro.pa.version");
-        paVersion = paVersion.replaceAll("([0-9\\.]+?)-.*", "$1");
-        tv.setText("Paranoid Android " + paVersion);
+        String ventureVersion = SystemProperties.get("ro.venture.version");
+        ventureVersion = ventureVersion.replaceAll("([0-9\\.]+?)-.*", "$1");
+        tv.setText("VentureROM " + ventureVersion);
         tv.setVisibility(View.INVISIBLE);
 
         mContent.addView(bg);
