@@ -83,7 +83,7 @@ public class VentureEasterActivity extends Activity {
         letter.setTextSize(75);
         letter.setTextColor(TEXT_COLOR);
         letter.setGravity(Gravity.CENTER);
-        letter.setText("VENTURE");
+        letter.setText("Venture");
 
         final int p = (int)(4 * metrics.density);
 
